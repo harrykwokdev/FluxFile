@@ -1,0 +1,180 @@
+/**
+ * FluxFile - 全局样式
+ * =====================
+ */
+
+/* Tailwind 基础层 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   基础样式
+   ============================================================================ */
+
+@layer base {
+
+    /* 禁用默认的焦点轮廓样式 */
+    *:focus {
+        outline: none;
+    }
+
+    /* 自定义滚动条 */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: theme('colors.commander.bg');
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: theme('colors.commander.border');
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: theme('colors.commander.hover');
+    }
+
+    /* 根元素 */
+    html {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: theme('colors.commander.bg');
+        color: theme('colors.commander.text');
+    }
+
+    /* 等宽字体 for 文件名和路径 */
+    .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
+    }
+}
+
+/* ============================================================================
+   组件样式
+   ============================================================================ */
+
+@layer components {
+
+    /* 按钮基础样式 */
+    .btn {
+        @apply inline-flex items-center justify-center px-3 py-1.5;
+        @apply text-sm font-medium rounded;
+        @apply transition-colors duration-150;
+        @apply focus:outline-none focus:ring-2 focus:ring-commander-accent focus:ring-offset-2 focus:ring-offset-commander-bg;
+    }
+
+    .btn-primary {
+        @apply btn bg-commander-accent text-white;
+        @apply hover:bg-opacity-90;
+    }
+
+    .btn-secondary {
+        @apply btn bg-commander-hover text-commander-text;
+        @apply hover:bg-commander-border;
+    }
+
+    /* 输入框样式 */
+    .input {
+        @apply w-full px-3 py-1.5;
+        @apply text-sm text-commander-text;
+        @apply bg-commander-bg border border-commander-border rounded;
+        @apply placeholder:text-commander-text-dim;
+        @apply focus:outline-none focus:border-commander-accent focus:ring-1 focus:ring-commander-accent;
+    }
+}
+
+/* ============================================================================
+   工具类
+   ============================================================================ */
+
+@layer utilities {
+
+    /* 表格数字对齐 */
+    .tabular-nums {
+        font-variant-numeric: tabular-nums;
+    }
+
+    /* 文本截断单行 */
+    .truncate {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* 动画：脉冲 */
+    .animate-pulse {
+        animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    /* 动画：旋转 */
+    .animate-spin {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+/* ============================================================================
+   文件图标颜色（可选扩展）
+   ============================================================================ */
+
+/* 目录图标 */
+.file-icon-directory {
+    color: #80b0ff;
+}
+
+/* 图片文件 */
+.file-icon-image {
+    color: #e879f9;
+}
+
+/* 视频文件 */
+.file-icon-video {
+    color: #f472b6;
+}
+
+/* 代码文件 */
+.file-icon-code {
+    color: #67e8f9;
+}
+
+/* 文档文件 */
+.file-icon-document {
+    color: #fbbf24;
+}
+
+/* 压缩文件 */
+.file-icon-archive {
+    color: #a78bfa;
+}

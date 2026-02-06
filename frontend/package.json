@@ -1,0 +1,44 @@
+{
+    "name": "fluxfile-frontend",
+    "version": "1.0.0",
+    "description": "FluxFile - 高性能内网文件传输系统前端",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+        "type-check": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@tanstack/react-virtual": "^3.0.4",
+        "@types/jszip": "^3.4.0",
+        "clsx": "^2.1.0",
+        "date-fns": "^3.3.1",
+        "idb-keyval": "^6.2.1",
+        "immer": "^10.0.3",
+        "jszip": "^3.10.1",
+        "lucide-react": "^0.312.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-window": "^1.8.10",
+        "tailwind-merge": "^2.2.1",
+        "zustand": "^4.5.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.48",
+        "@types/react-dom": "^18.2.18",
+        "@types/react-window": "^1.8.8",
+        "@vitejs/plugin-react": "^4.2.1",
+        "autoprefixer": "^10.4.17",
+        "eslint": "^8.56.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.5",
+        "postcss": "^8.4.33",
+        "prettier": "^3.2.4",
+        "tailwindcss": "^3.4.1",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.12"
+    }
+}

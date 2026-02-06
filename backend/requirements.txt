@@ -1,0 +1,58 @@
+# ============================================================================
+# FluxFile Backend Dependencies
+# ============================================================================
+
+# Core Framework
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
+
+# Async IO
+aiofiles>=23.0.0
+httpx>=0.24.0
+
+# Data Validation
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Database
+redis>=4.5.0
+clickhouse-driver>=0.2.5
+
+# Authentication & Authorization
+casbin>=1.20.0
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# WebRTC
+aiortc>=1.6.0
+
+# WebDAV
+wsgidav>=4.3.0
+cheroot>=10.0.0
+
+# LDAP (optional)
+# python-ldap>=3.4.0
+
+# Build Tools (for C++ extension)
+pybind11>=2.10.0
+cmake>=3.16.0
+ninja>=1.11.0
+
+# ============================================================================
+# Development Dependencies
+# ============================================================================
+
+# Testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.0.0
+
+# Code Quality
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.0.0
+ruff>=0.0.270
+
+# Pre-commit hooks
+pre-commit>=3.0.0
